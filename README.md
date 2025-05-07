@@ -1,2 +1,2 @@
-# https-Partiawolnywrobel.net
+# https-Partiawolnywrobel
 Głosuj na wróbla
