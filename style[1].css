@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f9ff;
+}
+h1 {
+  color: #003366;
+}
+section {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+input {
+  margin: 5px;
+  padding: 5px;
+}
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+  padding-left: 20px;
+}

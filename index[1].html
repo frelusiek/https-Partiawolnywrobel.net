@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Partia Wolny Wróbel – Panel Admina</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🕊️ Panel Administracyjny – Partia Wolny Wróbel</h1>
+
+  <section>
+    <h2>Dodaj kanał</h2>
+    <input type="text" id="channelName" placeholder="Nazwa kanału" />
+    <button onclick="addChannel()">Dodaj</button>
+    <ul id="channelList"></ul>
+  </section>
+
+  <section>
+    <h2>Dodaj użytkownika</h2>
+    <input type="text" id="userName" placeholder="Imię/Nick" />
+    <input type="text" id="userRole" placeholder="Rola" />
+    <button onclick="addUser()">Dodaj</button>
+    <ul id="userList"></ul>
+  </section>
+
+  <section>
+    <h2>Wyślij wiadomość</h2>
+    <input type="text" id="messageText" placeholder="Treść wiadomości" />
+    <button onclick="sendMessage()">Wyślij</button>
+    <ul id="messageList"></ul>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

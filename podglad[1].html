@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Podgląd Panelu – Partia Wolny Wróbel</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #eef; }
+    section { background: #fff; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+    h2 { color: #0055aa; }
+    ul { padding-left: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Podgląd danych – Partia Wolny Wróbel</h1>
+
+  <section>
+    <h2>Kanały</h2>
+    <ul id="preview-channels"></ul>
+  </section>
+
+  <section>
+    <h2>Użytkownicy</h2>
+    <ul id="preview-users"></ul>
+  </section>
+
+  <section>
+    <h2>Wiadomości</h2>
+    <ul id="preview-messages"></ul>
+  </section>
+
+  <script>
+    const channels = JSON.parse(localStorage.getItem("channels")) || [];
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    const messages = JSON.parse(localStorage.getItem("messages")) || [];
+
+    const chList = document.getElementById("preview-channels");
+    channels.forEach(ch => {
+      const li = document.createElement("li");
+      li.textContent = ch;
+      chList.appendChild(li);
+    });
+
+    const userList = document.getElementById("preview-users");
+    users.forEach(u => {
+      const li = document.createElement("li");
+      li.textContent = `${u.name} – ${u.role}`;
+      userList.appendChild(li);
+    });
+
+    const msgList = document.getElementById("preview-messages");
+    messages.forEach(m => {
+      const li = document.createElement("li");
+      li.textContent = m;
+      msgList.appendChild(li);
+    });
+  </script>
+</body>
+</html>
